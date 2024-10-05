@@ -29,7 +29,7 @@ pipeline {
         stage('Deploy') {
             steps {
 
-                bat "docker build -t auth_image ."
+                bat "docker build -t api_image ."
                 bat "docker run -p 8060:8060 -d --name api_container api_image"
             }
         }
